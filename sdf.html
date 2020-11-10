@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clipn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Spectral&display=swap" rel="stylesheet">
+    <style>
+        a {
+            top: 100px;
+            left: 4px;
+        }
+
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin-left: 25px;
+        }
+
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+
+        .container:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        .container input:checked~.checkmark {
+            background-color: #eee;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .container input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .container .checkmark:after {
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #205fbd;
+        }
+
+        .klip {
+            margin-left: 25px;
+            font-size: 25px;
+        }
+
+        #buttombutton {
+            position: absolute;
+            left: 25px;
+            margin: 25px;
+        }
+
+        body,
+        * {
+            font-family: 'Spectral', serif;
+        }
+
+        body {
+            background-image: url("./hair-dresser-equipment-and-furniture-in-south-africa-1.jpg");
+            backdrop-filter: grayscale(100%);
+            min-height: calc(100vh - 0px);
+            margin: 0;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 135vh;
+        }
+
+        #body {
+            background-color: #3498db;
+            max-width: 1200px;
+            width: 100%;
+            min-height: 135vh;
+            height: fit-content;
+        }
+
+        #bodyContainer {
+            display: flex;
+            justify-content: center;
+            min-height: 100%;
+            height: fit-content;
+        }
+
+        h1 {
+            color: #2980b9;
+            text-align: center;
+            top: 0px;
+            font-size: 60px;
+            margin-top: 0px;
+
+        }
+
+        .boks {
+            color: white;
+            text-align: center;
+            width: 250px;
+            height: 70%;
+            background-color: #2980b9;
+            margin: 8px;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px #2e2e2ea2;
+            position: relative;
+        }
+
+        .boks h3 {
+            text-align: left;
+            padding: 10px;
+        }
+
+        #flexbox {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            height: 50vh;
+        }
+
+        .boks button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: background-color 0.2s;
+        }
+
+        button {
+            margin: 10px;
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            border: 2px solid white;
+            background-color: #ffffff23;
+            color: white;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s !important;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::after {
+            content: "";
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 0px;
+            background-color: #61aadb;
+            position: absolute;
+            transition: width 0.2s;
+            z-index: -2;
+        }
+
+        button:hover::after {
+            width: 100%;
+        }
+
+        button:hover {
+            color: white;
+            border-color: #61aadb;
+        }
+
+        #h1div {
+            background-color: lightgray;
+            width: 100%;
+            top: 0px;
+            left: 0px;
+            height: 100px;
+        }
+
+        #h2div {
+            color: white;
+            margin-top: 8px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id=bodyContainer>
+        <div id=body style="position:relative">
+            <div id=h1div>
+                <h1>Clipin.com</h1>
+                <a href="index.html" style="position:absolute"><button>tilbage</button></a>
+                <div id=h2div>
+                    <h2>2. skradersy din frisør oplevelse</h2>
+                </div>
+                <h2 class="klip">>Klip</h2>
+                <label class="container">Etager
+                    <input type="radio" checked="checked" name="klip">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Spidser
+                    <input type="radio" checked="checked" name="klip">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Længder
+                    <input type="radio" checked="checked" name="klip">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Frisure
+                    <input type="radio" checked="checked" name="klip">
+                    <span class="checkmark"></span>
+                </label>
+
+                <h2 class="klip">>Farve</h2>
+                <label class="container">Helfarve
+                    <input type="radio" checked="checked" name="Farve">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Striber
+                    <input type="radio" checked="checked" name="Farve">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Ombre
+                    <input type="radio" checked="checked" name="Farve">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Balayage
+                    <input type="radio" checked="checked" name="Farve">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Ingen
+                    <input type="radio" checked="checked" name="Farve">
+                    <span class="checkmark"></span>
+                </label>
+
+                <h2 class="klip">>hårstyle</h2>
+                <label class="container">Krøller
+                    <input type="radio" checked="checked" name="hårstyle">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Glatning
+                    <input type="radio" checked="checked" name="hårstyle">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Andet
+                    <input type="radio" checked="checked" name="hårstyle">
+                    <span class="checkmark"></span>
+                </label>
+
+                <h2 class="klip">>køn</h2>
+                <label class="container">Mand
+                    <input type="radio" checked="checked" name="køn">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Kvinde
+                    <input type="radio" checked="checked" name="køn">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">Andet
+                    <input type="radio" checked="checked" name="køn">
+                    <span class="checkmark"></span>
+                    <br>
+                    <a href="vdf.html"><button id="buttombutton">Vælg</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

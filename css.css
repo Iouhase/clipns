@@ -1,0 +1,120 @@
+body,* {
+    font-family: 'Spectral', serif;
+}
+
+body {
+    background-image: url("./hair-dresser-equipment-and-furniture-in-south-africa-1.jpg");
+    backdrop-filter: grayscale(100%);
+    min-height:calc(100vh - 0px);
+    margin:0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:fit-content;
+}
+
+#body {
+    background-color: #3498db;
+    max-width: 1200px;
+    width: 100%;
+    min-height: 100vh;
+    height:fit-content;
+}
+
+#bodyContainer {
+    display: flex;
+    justify-content: center;
+    min-height:100%;
+    height:fit-content;
+}
+h1 {
+    color: #2980b9;
+    text-align: center;
+    top: 0px;
+    font-size: 60px;
+    margin-top: 0px;
+
+}
+#h1div {
+    background-color: lightgray;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+}
+
+#h2div {
+    color: white;
+    margin-top: 8px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.boks {
+    color: white;
+    text-align: center;
+    width: 250px;
+    height: 330px;
+    background-color: #2980b9;
+    margin: 8px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #2e2e2ea2;
+    position: relative;
+}
+
+.boks h3 {
+    text-align: left;
+    padding: 10px;
+}
+
+#flexbox {
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    height:50vh;
+}
+
+.boks button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.2s;
+}
+
+button {
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border:2px solid white;
+    background-color:#ffffff23;
+    color:white;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s !important;
+    font-weight: bold;
+    position:relative;
+    overflow:hidden;
+}
+
+button::after {
+    content:"";
+    top:0px;
+    left:0px;
+    height:100%;
+    width:0px;
+    background-color:#61aadb;
+    position:absolute;
+    transition:width 0.2s;
+    z-index: -2;
+}
+
+button:hover::after {
+    width:100%;
+}
+
+button:hover {
+    color:white;
+    border-color: #61aadb;
+}
+
