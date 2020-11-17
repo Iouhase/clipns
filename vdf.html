@@ -216,6 +216,37 @@
         #tilbagebutton{
             top:100px;
         }
+
+        #popup {
+            position:fixed;
+            left:calc(50% - 350px);
+            transform:translateX(-50%);
+            top:50%;
+            transform:translateY(-50%);
+
+            width:700px;
+            height:540px;
+
+            background-color: lightgray;
+            opacity: 0;
+            display:none;
+
+            transition: opacity 0.2s ease;
+            border-radius: 8px;
+        }
+
+        #popup.visible {
+            opacity:1;
+            display:block;
+        }
+        #pelle{
+            width:100px;
+            margin: 10px;
+        }
+        .pelletxt{
+            font-size: 25px;
+            padding:10px;
+        }
     </style>
 </head>
 
@@ -247,7 +278,7 @@
                         class="buttonthing">vælg</button></a></div>
             <div id="underboks3" class="underbokse"><img class="img" src="frisr_emil.jfif" alt=""><a href=""><button
                         class="buttonthing">vælg</button></a></div>
-            <div id="underboks4" class="underbokse"><img class="img" src="frisr_7.jfif" alt=""><a href=""><button
+            <div id="underboks4" class="underbokse" onclick="popup()"><img class="img" src="frisr_7.jfif" alt=""><a href=""><button
                         class="buttonthing">vælg</button></a></div>
         </div>
         <div id="boks1" class="bokse2">
@@ -271,6 +302,19 @@
         <div id="underboks4" class="underbokse2"><img class="img" src="frisr_5.jfif" alt=""><a href=""><button
                     class="buttonthing">vælg</button></a></div>
     </div>
+    <div id="popup" ><img id="pelle" src="frisr_7.jfif" alt="">
+        <p class="pelletxt">Pelle</p>
+        <p class="pelletxt">21år</p>
+        <p class="pelletxt">Lokation: København</p>
+        <p class="pelletxt">4/5 ✯✯✯✯✰</p>
+    </div>
 </body>
+
+<script>
+    function popup()
+    {
+        document.getElementById("popup").className = "visible";
+    }
+</script>
 
 </html>
